@@ -1,5 +1,5 @@
 # GfyCatter
-Simple Telegram bot to upload GIFs from Telegram to gfycat
+Simple Telegram bot to upload GIFs from Telegram to gfycat. Currently can be found on [@GfyCatterBot](https://t.me/GfyCatterBot)
 
 ## Dependencies
 * python-telegram-bot
