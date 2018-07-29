@@ -17,13 +17,15 @@ def start(bot, update):
 
 
 def gfycat_that(bot, update):
-    chat_id = update.message.chat_id
     doc = update.message.document
-
+    if doc.mime_type != 'video/mp4':
+        return 
+    
+    chat_id = update.message.chat_id
     bot.send_chat_action(chat_id=chat_id, action=ChatAction.UPLOAD_DOCUMENT)
 
     directory = str(chat_id)
-    path = os.path.join('.', directory, doc.file_name)
+    path = os.path.join('.', directory, doc.file_id)
     if not os.path.isdir(directory):
         os.mkdir(directory)
 
